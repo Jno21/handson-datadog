@@ -64,5 +64,10 @@ L'AMI installe sera sous Debian 9.
 
 - Ajouter l'integration [AWS](https://app.datadoghq.com/account/settings#integrations/amazon-web-services)
 - Ajouter un / des [checks http](https://docs.datadoghq.com/integrations/http_check/) dans le client
-- Faire une Lambda (Faite une lambda hello world) puis activé les metriques dans Datadog (Indice: AWS Integration)
+- Ajouter le [monitoring de process](https://docs.datadoghq.com/infrastructure/process/?tab=linuxwindows)
 - Creer une alerte sur le nombre de 4XX Nginx (Indice, il faut utiliser les logs)
+- Faire une Lambda (Faite une lambda hello world) puis activé les metriques dans Datadog (Indice: AWS Integration)
+
+### Aide
+
+- [Information Agent Debian](https://docs.datadoghq.com/agent/basic_agent_usage/deb/?tab=agentv6v7)
