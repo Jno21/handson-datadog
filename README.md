@@ -14,7 +14,7 @@ Ce qui sera abordé:
 
 ## Installation du serveur
 
-L'AMI installe sera sous Unbuntu.
+L'AMI installe sera sous Ubuntu.
 
 :warning: ATTENTION Veuillez installer le Wordpress avec Nginx SSL secure !!!!!!!! :warning:
 - Suivre le tutoriel [Wordpress AWS](https://aws.amazon.com/getting-started/tutorials/launch-a-wordpress-website/)
@@ -46,7 +46,7 @@ L'AMI installe sera sous Unbuntu.
     }
     ```
   - Sauver / Quitter
-  - Editer `sudo vi /opt/bitnami/nginx/conf/bitnami/status.conf`
+  - Editer `sudo vi /opt/bitnami/nginx/conf/bitnami/bitnami.conf`
   - Ajouter cette ligne a la fin
   - `include "/opt/bitnami/nginx/conf/bitnami/status.conf";`
 - `sudo nginx -s reload`
