@@ -57,7 +57,7 @@ L'AMI installe sera sous Debian 9.
 - Configurer l'agent pour avoir les infos de [Nginx](https://app.datadoghq.com/account/settings#integrations/nginx)
 - Ajouter le forwarding des logs [Nginx](https://app.datadoghq.com/account/settings#integrations/nginx)
   - Les logs sont situés dans ce dossier: `/opt/bitnami/nginx/logs`
-- Creer une alarme sur le nombre de 4XX Nginx
+- Creer une alarme sur le nombre de request/s Nginx
 - Creer un Dashboard (Amusez-vous :)
 
 ## Bonus
@@ -65,3 +65,4 @@ L'AMI installe sera sous Debian 9.
 - Ajouter l'integration [AWS](https://app.datadoghq.com/account/settings#integrations/amazon-web-services)
 - Ajouter un / des [checks http](https://docs.datadoghq.com/integrations/http_check/) dans le client
 - Faire une Lambda (Faite une lambda hello world) puis activé les metriques dans Datadog (Indice: AWS Integration)
+- Creer une alerte sur le nombre de 4XX Nginx (Indice, il faut utiliser les logs)
