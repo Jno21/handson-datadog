@@ -1,7 +1,7 @@
 # handson-datadog
 
-Le but de ce Handson est d'avoir une premiere approche sur Datadog.
-Ce qui sera aborde:
+Le but de ce Handson est d'avoir une première approche sur Datadog.
+Ce qui sera abordé:
 
 - Monitoring (Systeme, Application)
 - Logs
@@ -19,7 +19,7 @@ L'AMI installe sera sous Debian 9.
 - Suivre le tutoriel [Wordpress AWS](https://aws.amazon.com/getting-started/tutorials/launch-a-wordpress-website/)
 - Se ssh en utilisant votre Key et l'user `bitnami`
 - Activer la page de status nginx:
-  - `sudo vi ~/stack/nginx/conf/bitnami/status.conf`
+  - `sudo vi /opt/bitnami/nginx/conf/bitnami/status.conf`
   - Y mettre:
     ```
     server {
@@ -45,7 +45,7 @@ L'AMI installe sera sous Debian 9.
     }
     ```
   - Sauver / Quitter
-  - Editer `sudo vi ~/stack/nginx/conf/bitnami/status.conf`
+  - Editer `sudo vi /opt/bitnami/nginx/conf/bitnami/status.conf`
   - Ajouter cette ligne a la fin
   - `include "/opt/bitnami/nginx/conf/bitnami/status.conf";`
 - `sudo nginx -s reload`
@@ -53,10 +53,15 @@ L'AMI installe sera sous Debian 9.
 
 ## Datadog Handson
 
-- Installer l'agent Datadog sur le serveur (Votre choix, cela peut etre en allant sur la machine avec SSH, en utilisant Ansible etc...)
+- Installer l'agent Datadog sur le serveur (Votre choix, cela peut etre en allant sur la machine avec SSH, en utilisant Ansible etc...) [Debian Installation](https://app.datadoghq.com/account/settings#agent/debian)
 - Configurer l'agent pour avoir les infos de [Nginx](https://app.datadoghq.com/account/settings#integrations/nginx)
 - Ajouter le forwarding des logs [Nginx](https://app.datadoghq.com/account/settings#integrations/nginx)
-  - Les logs sont situe dans ce dossier: `/opt/bitnami/nginx/logs` 
-- Ajouter l'integration [AWS](https://app.datadoghq.com/account/settings#integrations/amazon-web-services)
-- Creer une alarme sur le nombre de 404 Nginx
+  - Les logs sont situés dans ce dossier: `/opt/bitnami/nginx/logs`
+- Creer une alarme sur le nombre de 4XX Nginx
 - Creer un Dashboard (Amusez-vous :)
+
+## Bonus
+
+- Ajouter l'integration [AWS](https://app.datadoghq.com/account/settings#integrations/amazon-web-services)
+- Ajouter un / des [checks http](https://docs.datadoghq.com/integrations/http_check/) dans le client
+- Faire une Lambda (Faite une lambda hello world) puis activé les metriques dans Datadog (Indice: AWS Integration)
