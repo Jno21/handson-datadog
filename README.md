@@ -14,8 +14,9 @@ Ce qui sera abordé:
 
 ## Installation du serveur
 
-L'AMI installe sera sous Debian 9.
+L'AMI installe sera sous Unbuntu.
 
+:warning: ATTENTION Veuillez installer le Wordpress avec Nginx SSL secure !!!!!!!! :warning:
 - Suivre le tutoriel [Wordpress AWS](https://aws.amazon.com/getting-started/tutorials/launch-a-wordpress-website/)
 - Se ssh en utilisant votre Key et l'user `bitnami`
 - Activer la page de status nginx:
@@ -53,7 +54,7 @@ L'AMI installe sera sous Debian 9.
 
 ## Datadog Handson
 
-- Installer l'agent Datadog sur le serveur (Votre choix, cela peut etre en allant sur la machine avec SSH, en utilisant Ansible etc...) [Debian Installation](https://app.datadoghq.com/account/settings#agent/debian)
+- Installer l'agent Datadog sur le serveur (Votre choix, cela peut etre en allant sur la machine avec SSH, en utilisant Ansible etc...) [Ubuntu Installation](https://app.datadoghq.com/account/settings#agent/ubuntu)
 - Configurer l'agent pour avoir les infos de [Nginx](https://app.datadoghq.com/account/settings#integrations/nginx)
 - Ajouter le forwarding des logs [Nginx](https://app.datadoghq.com/account/settings#integrations/nginx)
   - Les logs sont situés dans ce dossier: `/opt/bitnami/nginx/logs`
@@ -70,4 +71,4 @@ L'AMI installe sera sous Debian 9.
 
 ### Aide
 
-- [Information Agent Debian](https://docs.datadoghq.com/agent/basic_agent_usage/deb/?tab=agentv6v7)
+- [Information Agent Ubuntu](https://docs.datadoghq.com/agent/basic_agent_usage/ubuntu/?tab=agentv6v7)
